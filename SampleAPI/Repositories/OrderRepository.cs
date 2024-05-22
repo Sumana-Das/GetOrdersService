@@ -28,7 +28,9 @@ namespace SampleAPI.Repositories
             {
                 EntryDate = newOrder.EntryDate,
                 Description = newOrder.Description,
-                Name = newOrder.Name
+                Name = newOrder.Name,
+                IsInvoiced = newOrder.IsInvoiced,
+                IsDeleted = newOrder.IsDeleted,
             };
             _dbContext.Orders.Add(order);
             _dbContext.SaveChanges();
